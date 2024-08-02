@@ -1,0 +1,64 @@
+<div id="<%= dom_id student %>">
+
+<div class="card offset-3 col-6 mt-3 box-shadow">
+  <h5 class="card-header">Student Details</h5>
+  <div class="card-body">
+    
+     <p>
+    <strong>First name:</strong>
+    <%= student.first_name %>
+  </p>
+
+  <p>
+    <strong>Last name:</strong>
+    <%= student.last_name %>
+  </p>
+
+  <p>
+    <strong>Gender:</strong>
+    <%= student.gender %>
+  </p>
+
+  <p>
+    <strong>Dob:</strong>
+    <%= student.dob %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= student.phone %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= student.address %>
+  </p>
+
+  <p>
+    <strong>Form:</strong>
+    <%= student.form %>
+  </p>
+
+  <p>
+    <strong>Combination:</strong>
+    <%= student.combination %>
+  </p>
+
+  <p>
+    <strong>Parent guardian:</strong>
+    <%= student.parent_guardian %>
+  </p>
+
+  <p>
+    <strong>Religion:</strong>
+    <%= student.religion %>
+  </p>
+    
+  </div>
+  <div>
+  <%= link_to "Edit", edit_student_path(@student),class:"btn btn-secondary" %> 
+  <%= link_to "Back", students_path,class:"btn btn-secondary" %>
+  <%= link_to "Delete",student_path(student), data:{turbo_method: :delete, turbo_confirm: "Are you sure?"},class:"btn btn-danger" %>
+</div>
+
+</div>

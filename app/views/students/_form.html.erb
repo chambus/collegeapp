@@ -1,0 +1,67 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+   
+    <%= form.text_field :first_name, class:"form-control",placeholder:"First Name" %>
+  </div>
+
+  <div class="mb-3">
+   
+    <%= form.text_field :last_name, class:"form-control",placeholder:"Last Name" %>
+  </div>
+
+  <div class="mb-3">
+   
+    <%= form.text_field :gender, class:"form-control",placeholder:"Gender" %>
+  </div>
+
+  <div class="mb-3">
+   
+    <%= form.date_field :dob, class:"form-control",placeholder:"Date of Birth" %>
+  </div>
+
+  <div class="mb-3">
+    
+    <%= form.text_field :phone, class:"form-control",placeholder:"Phone Number" %>
+  </div>
+
+  <div class="mb-3">
+   
+    <%= form.text_field :address, class:"form-control",placeholder:"Address" %>
+  </div>
+
+  <div class="mb-3">
+   
+    <%= form.text_field :form , class:"form-control",placeholder:"Class"%>
+  </div>
+
+  <div class="mb-3">
+    
+    <%= form.text_field :combination, class:"form-control",placeholder:"Subjects combination" %>
+  </div>
+
+  <div class="mb-3">
+    
+    <%= form.text_field :parent_guardian, class:"form-control",placeholder:"Parent/Guardian Name" %>
+  </div>
+
+  <div class="mb-3">
+    
+    <%= form.text_field :religion, class:"form-control",placeholder:"Religion" %>
+  </div>
+
+  <div>
+    <%= form.submit class:'btn btn-secondary'%>
+  </div>
+<% end %>
